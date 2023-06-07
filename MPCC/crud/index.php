@@ -45,6 +45,7 @@ include 'backend/database.php';
                         <th>NAME</th>
                         <th>EMAIL</th>
 						<th>PASSWORD</th>
+						<th>PHONE</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
@@ -66,6 +67,7 @@ include 'backend/database.php';
 					<td><?php echo $row["name"]; ?></td>
 					<td><?php echo $row["email"]; ?></td>
 					<td><?php echo $row["Password"]; ?></td>
+					<td><?php echo $row["Phone"]; ?></td>
 					<td>
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
 							<i class="material-icons update" data-toggle="tooltip" 
@@ -73,6 +75,7 @@ include 'backend/database.php';
 							data-name="<?php echo $row["name"]; ?>"
 							data-email="<?php echo $row["email"]; ?>"
 							data-Password="<?php echo $row["Password"]; ?>"
+							data-phone="<?php echo $row["Phone"]; ?>"
 							title="Edit">&#xE254;</i>
 						</a>
 						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
@@ -110,10 +113,10 @@ include 'backend/database.php';
 							<label>PASSWORD</label>
 							<input type="password" id="password" name="password" class="form-control" required>
 						</div>
-						<!-- <div class="form-group">
-							<label>CITY</label>
-							<input type="city" id="city" name="city" class="form-control" required>
-						</div>					 -->
+						<div class="form-group">
+							<label>phone</label>
+							<input type="phone" id="phone" name="phone" class="form-control" required>
+						</div>					
 					</div>
 					<div class="modal-footer">
 					    <input type="hidden" value="1" name="type">
@@ -146,6 +149,10 @@ include 'backend/database.php';
 						<div class="form-group">
 							<label>PASSWORD</label>
 							<input type="password" id="password-2" name="password" class="form-control" required>
+						</div>		
+						<div class="form-group">
+							<label>PHONE</label>
+							<input type="phone" id="phone" name="phone" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">

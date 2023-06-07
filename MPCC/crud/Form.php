@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style-2.css">
 </head>
 <body>
   <div class="container">
@@ -26,6 +26,10 @@
         <label for="password">Password:</label>
         <input type="password" class="form-control" id="password" name="password" required>
       </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="phone" class="form-control" id="phone" name="phone" required>
+      </div>
       <!-- <div class="form-group">
         <label for="photo">Upload Photo:</label>
         <input type="file" class="form-control-file" id="photo" name="photo">
@@ -42,10 +46,11 @@ if(isset($_POST['register'])) {
     $name     =  $_POST['name']; 
     $email    =  $_POST['email'];
     $password =  $_POST['password'];
+    $phone =  $_POST['Phone'];
     // $photo    =  $_FILES['photo']['name'];
 
-    $query = "INSERT INTO crud (name, email, password) 
-    VALUES('$name', '$email', '$password')";
+    $query = "INSERT INTO crud (name, email, password, Phone) 
+    VALUES('$name', '$email', '$password', '$phone')";
 
     $data = mysqli_query($conn, $query);
 
