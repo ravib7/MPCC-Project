@@ -45,7 +45,7 @@ include 'backend/database.php';
                         <th>NAME</th>
                         <th>EMAIL</th>
 						<th>PASSWORD</th>
-						<th>PHONE</th>
+						<!-- <th>PHONE</th> -->
                         <th>ACTION</th>
                     </tr>
                 </thead>
@@ -67,7 +67,6 @@ include 'backend/database.php';
 					<td><?php echo $row["name"]; ?></td>
 					<td><?php echo $row["email"]; ?></td>
 					<td><?php echo $row["Password"]; ?></td>
-					<td><?php echo $row["Phone"]; ?></td>
 					<td>
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
 							<i class="material-icons update" data-toggle="tooltip" 
@@ -113,10 +112,10 @@ include 'backend/database.php';
 							<label>PASSWORD</label>
 							<input type="password" id="password" name="password" class="form-control" required>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label>phone</label>
 							<input type="phone" id="phone" name="phone" class="form-control" required>
-						</div>					
+						</div>					 -->
 					</div>
 					<div class="modal-footer">
 					    <input type="hidden" value="1" name="type">
@@ -150,10 +149,10 @@ include 'backend/database.php';
 							<label>PASSWORD</label>
 							<input type="password" id="password-2" name="password" class="form-control" required>
 						</div>		
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label>PHONE</label>
 							<input type="phone" id="phone" name="phone" class="form-control" required>
-						</div>					
+						</div>					 -->
 					</div>
 					<div class="modal-footer">
 					<input type="hidden" value="2" name="type">

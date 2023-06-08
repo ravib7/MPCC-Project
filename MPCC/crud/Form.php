@@ -26,10 +26,10 @@
         <label for="password">Password:</label>
         <input type="password" class="form-control" id="password" name="password" required>
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="phone">Phone:</label>
         <input type="phone" class="form-control" id="phone" name="phone" required>
-      </div>
+      </div> -->
       <!-- <div class="form-group">
         <label for="photo">Upload Photo:</label>
         <input type="file" class="form-control-file" id="photo" name="photo">
@@ -46,11 +46,11 @@ if(isset($_POST['register'])) {
     $name     =  $_POST['name']; 
     $email    =  $_POST['email'];
     $password =  $_POST['password'];
-    $phone =  $_POST['Phone'];
+    // $phone =  $_POST['Phone'];
     // $photo    =  $_FILES['photo']['name'];
 
-    $query = "INSERT INTO crud (name, email, password, Phone) 
-    VALUES('$name', '$email', '$password', '$phone')";
+    $query = "INSERT INTO crud (name, email, password) 
+    VALUES('$name', '$email', '$password')";
 
     $data = mysqli_query($conn, $query);
 
