@@ -23,17 +23,17 @@
         <input type="email" class="form-control" id="email" name="email" required>
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" name="password" required>
-      </div>
-      <!-- <div class="form-group">
-        <label for="phone">Phone:</label>
+        <label for="phone">Phone no.:</label>
         <input type="phone" class="form-control" id="phone" name="phone" required>
-      </div> -->
-      <!-- <div class="form-group">
+      </div>
+      <div class="form-group">
+        <label for="phone">Alternate Phone no.:</label>
+        <input type="phone" class="form-control" id="ahone" name="aphone">
+       </div>
+        <div class="form-group">
         <label for="photo">Upload Photo:</label>
         <input type="file" class="form-control-file" id="photo" name="photo">
-      </div> -->
+      </div>
       <button type="submit" class="btn btn-primary" name="register">Register</button>
     </form>
   </div>
@@ -43,14 +43,15 @@
 
 <?php
 if(isset($_POST['register'])) {
-    $name     =  $_POST['name']; 
-    $email    =  $_POST['email'];
-    $password =  $_POST['password'];
-    // $phone =  $_POST['Phone'];
+    $name                 =  $_POST['name']; 
+    $email                =  $_POST['email'];
+    $phone                =  $_POST['phone'];
+    $aphone         	    =  $_POST['aphone']; 
+
     // $photo    =  $_FILES['photo']['name'];
 
-    $query = "INSERT INTO crud (name, email, password) 
-    VALUES('$name', '$email', '$password')";
+    $query = "INSERT INTO crud (name, email, phone, aphone) 
+    VALUES('$name', '$email', '$phone', '$aphone')";
 
     $data = mysqli_query($conn, $query);
 

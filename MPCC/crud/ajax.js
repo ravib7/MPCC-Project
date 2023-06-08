@@ -22,12 +22,14 @@
 		var id=$(this).attr("data-id");
 		var name=$(this).attr("data-name");
 		var email=$(this).attr("data-email");
-		var password=$(this).attr("data-password");
+		var phone=$(this).attr("data-phone");
+		var aphone=$(this).attr("data-aphone");
 		// var city=$(this).attr("data-city");
 		$('#id_u').val(id);
 		$('#name_u').val(name);
 		$('#email_u').val(email);
-		$('#password_u').val(password);
+		$('#phone_u').val(phone);
+		$('#aphone_u').val(aphone);
 		// $('#city_u').val(city);
 	});
 	
