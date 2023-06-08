@@ -22,24 +22,40 @@
 		var id=$(this).attr("data-id");
 		var name=$(this).attr("data-name");
 		var email=$(this).attr("data-email");
+		var gender=$(this).attr("data-gender");
+		var birthday=$(this).attr("data-birthday");
 		var phone=$(this).attr("data-phone");
 		var aphone=$(this).attr("data-aphone");
-		// var city=$(this).attr("data-city");
+		var taluka=$(this).attr("data-taluka");
+		var district=$(this).attr("data-district");
+		var state=$(this).attr("data-state");
+		var aadhaar=$(this).attr("data-aadhaar");
+		var address=$(this).attr("data-address");
+
 		$('#id_u').val(id);
 		$('#name_u').val(name);
 		$('#email_u').val(email);
+		$('#gender_u').val(gender);
+		$('#birthday_u').val(birthday);
 		$('#phone_u').val(phone);
 		$('#aphone_u').val(aphone);
-		// $('#city_u').val(city);
+		$('#taluka_u').val(taluka);
+		$('#district_u').val(district);
+		$('#state_u').val(state);
+		$('#aadhaar_u').val(aadhaar);
+		$('#address_u').val(address);
+		
 	});
 	
 	$(document).on('click','#update',function(e) {
+		debugger;
 		var data = $("#update_form").serialize();
 		$.ajax({
 			data: data,
 			type: "post",
 			url: "backend/save.php",
 			success: function(dataResult){
+				alert("Started");
 					var dataResult = JSON.parse(dataResult);
 					if(dataResult.statusCode==200){
 						$('#editEmployeeModal').modal('hide');
@@ -49,7 +65,10 @@
 					else if(dataResult.statusCode==201){
 					   alert(dataResult);
 					}
-			}
+			},
+			fail: function(xhr, textStatus, errorThrown){
+				alert('request failed');
+			 }
 		});
 	});
 	$(document).on("click", ".delete", function() { 
