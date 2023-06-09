@@ -11,7 +11,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Run queries or perform database operations here
+// Run a test query
+$sql = "SELECT 1";
+$result = $conn->query($sql);
+
+// Check if the query was successful
+if ($result === TRUE) {
+    echo "Database connection is working.";
+} else {
+    echo "Error: " . $conn->error;
+}
 
 $conn->close();
 ?>
