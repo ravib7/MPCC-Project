@@ -69,7 +69,7 @@ include 'backend/database.php';
 								<input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["id"]; ?>">
 								<label for="checkbox2"></label>
 							</span>
-						</td>
+				</td>
 					<td><?php echo $row["id"]; ?></td>
 					<td><?php echo $row["name"]; ?></td>
 					<td><?php echo $row["email"]; ?></td>
@@ -83,6 +83,7 @@ include 'backend/database.php';
 					<td><?php echo $row["aadhaar"]; ?></td>
 					<td><?php echo $row["address"]; ?></td>
 					<td>
+						
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
 							<i class="material-icons update" data-toggle="tooltip" 
 							data-id="<?php echo $row["id"]; ?>"

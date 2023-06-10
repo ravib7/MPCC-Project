@@ -51,10 +51,10 @@ $(document).on('click', '.update', function (e) {
 $(document).on('click', '#update', function (e) {
     debugger;
     var data = $("#update_form").serialize();
-	$.ajax({
+    $.ajax({
         data: data,
         type: "post",
-        url: "../backend/save.php",
+        url: "backend/save.php",
         success: function (dataResult) {
             if (dataResult.statusCode == 200) {
                 $('#editEmployeeModal').modal('hide');
