@@ -1,76 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aboutus</title>
-    <link rel="stylesheet" href="Components/CSS/style.css">
-   
-
+    <meta charset="utf-8">
+	<title>Contact-us Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="Components/CSS/navbar.css"> 
+	<link rel="stylesheet" href="Components/CSS/style.css">
+    <link rel="stylesheet" href="Components/CSS/contact-us.css">
+	<link rel="stylesheet" href="Components/CSS/about-us.css">
+    <link rel="stylesheet" href="Components/CSS/image slide.css">
+    <link rel="stylesheet" href="Components/CSS/sing in& signup.css">
 </head>
 
 <body>
 
-	<div class="container-fluid">
-		<div class="headline">
-			<img src="Components/Images/top image.png">
-			<!-- <h3>सत्यम‍ेव जयते</h3> -->
-		</div>
+<!-------------------Heading-img----------------------->
+<div class="container-fluid">
+	<div class="headline">
+		<img src="Components/Images/top image.png" alt="Top Image">
+		<!-- <h3>सत्यम‍ेव जयते</h3> -->
 	</div>
+</div>
+<!-------------------Heading-img----------------------->
 
-	<header>
-		<div class="nav-bar" style="margin-bottom: 125px;">
-			<!-- <img src="Components/Images/congress2.png"> -->
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li>
-					<a href="#">Application</a>
-					<ul>
-						<li><a href="crud/Form.php" width="100%" height="3155px" frameborder="0"
-								marginheight="0" marginwidth="0">Business</a></li>
-						<li><a href="#">Job</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Events&News</a></li>
-				<li> <a href="#">GR</a></li>
-				<li>
-					<a href="#">Login</a>
-					<ul>
-						<li><a href="signin.html" width="100%" height="3155px" frameborder="0"
-								marginheight="0" marginwidth="0">Sign in</a></li>
-						<li><a href="signup.html">Sign up</a></li>
-					</ul>
-				</li>
-				<li><a href="about-us.html">About us</a></li>
-				<li><a href="contact-us.html">Contact us</a></li>
+<!-------------------------Navbar-start---------------------------->
 
-			</ul>
-		</div>
+<nav>
+  <div class="logo">M.P.C.C</div>
+  <label for="btn" class="icon">
+	<span class="fas fa-bars"></span>
+  </label> 
+  <input type="checkbox" id="btn"> 
+  <ul>
+	<li><a href="index.html">Home</a></li>
+	<li>
 
-	</header>
-<!------------------------Card Design---------------------------->
+	  <label for="btn-1" class="show">Application +</label>
+	  <a href="#">Application</a>
+	  <input type="checkbox" id="btn-1">
+	  <ul>
+		<li><a  href="crud/Form.php">Business</a></li>
+		<li><a  href="#">Job</a></li>
+	  </ul>
+	</li>
+	<li>
 
-<div class="col-lg-4 col-md-6 mb-4">
-    <div class="card" style="margin-left: 260px;">
-      <img src="Components/Images/nana bhau (1).png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title"><img src="Components/Images/nana bhau name.png">
-      </div>
-    </div>
-  </div>  
+	<li><a href="#">Events&News</a></li>
+	<li><a href="#">GR</a></li>
+	<li>
 
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card" style="margin-right:260px; margin-top:-452px;">
-      <img src="Components/Images/mashalkar2.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title"><img src="Components/Images/Yogesh Bhau name.png">
-      </div>
-    </div>
-  </div>  
+	  <label for="btn-2" class="show">Login +</label>
+	  <a href="#">Login</a>
+	  <input type="checkbox" id="btn-2">
+	  <ul>
+		<li><a  href="signin.html">Sign in</a></li>
+		<li><a  href="signup.html">Sign up</a></li>
+	  </ul>
 
+		<li><a href="about-us.html">About us</a></li>
+		<li><a href="contact-us.html">Contact us</a></li>
+		  </ul>
+		</li> 
+	  </ul> 
+	</li>
+  </ul>
+</nav>          
+
+<!-------------------------Navbar-End---------------------------->
+
+<!-------------------------Card-design Start---------------------------->
+
+<!-------------------------Card-design End---------------------------->
+
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="Components/JS/app.js"></script>
 
 </body>
-
 </html>
