@@ -1,0 +1,115 @@
+/*------------------------Card-1----------------------*/
+
+.card {
+  margin: 20px;
+  background-color: #f7f7f7;
+  border-color: #e9e9e9;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 148%;
+    margin-left: -22%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .card {
+    width: 70%;
+    margin-left: -110px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .card {
+    width: 61%;
+    margin-left: -65px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1400px) {
+  .card {
+    width: 40%;
+    margin-left: -58px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1401px) {
+  .card {
+    width: 40%;
+  }
+}
+
+/*------------------------Card-2----------------------*/
+
+.card2 {
+  margin: 20px;
+  background-color: #f7f7f7;
+  border-color: #e9e9e9;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+.card2:hover {
+  transform: scale(1.05);
+}
+
+.card2-img-top {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .card2 {
+    width: 148%;
+    margin-left: -23%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .card2 {
+    width: 70%;
+    margin-left: 210px;
+    margin-top: -382px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .card2 {
+    width: 61%;
+    margin-left: 210px;
+    margin-top: -402px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1400px) {
+  .card2 {
+    width: 40%;
+    margin-left: 370px;
+    margin-top: -379px;
+  }
+}
+
+@media (min-width: 1401px) {
+  .card2 {
+    width: 40%;
+  }
+}
