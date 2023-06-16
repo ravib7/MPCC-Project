@@ -1,5 +1,5 @@
 
-<?php include("backend/database.php"); ?>
+<!-- <?php include("info.php"); ?> -->
 
 <!DOCTYPE html>
 <html>

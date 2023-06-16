@@ -1,8 +1,9 @@
-    
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-    <head>
-    <meta charset="utf-8">
+<?php include "connection.php" ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
     <title>M.P.C.C</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,12 +13,11 @@
     <link rel="stylesheet" href="Components/CSS/image slide.css">
     <link rel="stylesheet" href="Components/CSS/events-&-news.css">
     <link rel="stylesheet" href="Components/CSS/sing in& signup.css">
-    </head>
+</head>
+<body>
 
-    <body>
-
-    <!-------------------Heading-img----------------------->
-    <div class="container-fluid">
+ <!-------------------Heading-img----------------------->
+ <div class="container-fluid">
         <div class="headline">
             <img src="Components/Images/top image.png" alt="Top Image">
             <!-- <h3>सत्यम‍ेव जयते</h3> -->
@@ -34,7 +34,7 @@
       </label> 
       <input type="checkbox" id="btn"> 
       <ul>
-        <li><a href="view.php">Home</a></li>
+			<li><a href="view.php">Home</a></li>
         <li>
 
           <label for="btn-1" class="show">Application +</label>
@@ -74,10 +74,21 @@
 
 <div class="container-fluid">
   <div class="upload-image">
-    <img src="Components/Images/banner2.jpeg">
+  <?php 
+          $sql = "SELECT * FROM upload ORDER BY id DESC";
+          $res = mysqli_query($conn,  $sql);
+
+          if (mysqli_num_rows($res) > 0) {
+          	while ($upload = mysqli_fetch_assoc($res)) {  ?>
+             
+             <div class="alb">
+             	<img src="uploads/<?=$upload['image_url']?>">
+             </div>
+          		
+    <?php } }?>
   </div>
 </div>
-
+              
 <!--------------------------Image-Upload End--------------------->
 
 <!--------------------------Text-upload Start--------------------->
@@ -141,10 +152,8 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
      	<script src="Components/JS/app.js"></script>
 
-      
-      </body>
-    </html>
-    
-    
-    
 
+
+  
+</body>
+</html>

@@ -1,5 +1,4 @@
-/*------------------------Card-1----------------------*/
-
+/* Card-1 */
 .card {
   margin: 20px;
   background-color: #f7f7f7;
@@ -19,45 +18,46 @@
   object-fit: cover;
 }
 
+/* Media Queries for Card-1 */
 @media (max-width: 576px) {
   .card {
-    width: 148%;
-    margin-left: -22%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
   .card {
-    width: 70%;
-    margin-left: -110px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .card {
-    width: 61%;
-    margin-left: -65px;
-    margin-top: 30px;
+    width: 35%;
+    margin: 30px auto;
   }
 }
 
-@media (min-width: 993px) and (max-width: 1400px) {
+@media (min-width: 1025px) and (max-width: 1400px) {
   .card {
-    width: 40%;
-    margin-left: -58px;
-    margin-top: 30px;
+    width: 25%;
+    margin: 30px auto;
+    margin-right: 55%;
   }
 }
 
 @media (min-width: 1401px) {
   .card {
-    width: 40%;
+    width: 30%;
+    margin: 30px auto;
   }
 }
 
-/*------------------------Card-2----------------------*/
-
+/* Card-2 */
 .card2 {
   margin: 20px;
   background-color: #f7f7f7;
@@ -77,39 +77,41 @@
   object-fit: cover;
 }
 
+/* Media Queries for Card-2 */
 @media (max-width: 576px) {
   .card2 {
-    width: 148%;
-    margin-left: -23%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
   .card2 {
-    width: 70%;
-    margin-left: 210px;
-    margin-top: -382px;
+    width: 45%;
+    margin: 30px auto;
   }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .card2 {
-    width: 61%;
-    margin-left: 210px;
-    margin-top: -402px;
+    width: 35%;
+    margin: 30px auto;
   }
 }
 
-@media (min-width: 993px) and (max-width: 1400px) {
+@media (min-width: 1025px) and (max-width: 1400px) {
   .card2 {
-    width: 40%;
-    margin-left: 370px;
-    margin-top: -379px;
+    width: 25%;
+    margin: 30px auto;
+    margin-left: 55%;
+    margin-top: -40%;
   }
 }
 
 @media (min-width: 1401px) {
   .card2 {
-    width: 40%;
+    width: 30%;
+    margin: 30px auto;
   }
 }
