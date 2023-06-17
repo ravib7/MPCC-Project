@@ -10,9 +10,67 @@
 	  <link rel="stylesheet" href="Components/CSS/navbar.css"> 
 	  <link rel="stylesheet" href="Components/CSS/style.css">
 	  <link rel="stylesheet" href="Components/CSS/about-us.css">
-    <link rel="stylesheet" href="Components/CSS/image slide.css">
     <link rel="stylesheet" href="Components/CSS/events-&-news.css">
     <link rel="stylesheet" href="Components/CSS/sing in& signup.css">
+
+    <style>
+   .slide-container {
+    max-width: 97%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .slide-container {
+        height: 300px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .slide-container {
+        height: 400px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .slide-container {
+        height: 450px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+    .slide-container {
+        height: 500px;
+    }
+}
+
+    </style>
+
 </head>
 <body>
 
@@ -110,42 +168,33 @@
 
 <!-------------------------Image-slide start-------------------------->
 
-	<div class="image-slideshow">
-		<div class="image fade">
-			<img src="Components/Images/001.png" alt="Mountain Top">
-			<div class="text">भारत जोडो यात्रा</div>
-		</div>
+<div class="slide-container">
+        <?php
+        include "connection.php";
 
-		<div class="image fade">
-			<img src="Components/Images/002.png" alt="Palm Trees">
-			<div class="text">भारत जोडो यात्रा</div>
-		</div>
+        $sql = "SELECT image_url FROM pslide ORDER BY id DESC";
+        $result = mysqli_query($conn, $sql);
 
-		<div class="image fade">
-			<img src="Components/Images/003.png" alt="Neon Sign">
-			<div class="text">महाराष्ट्र प्रदेश काँग्रेस कमिटी </div>
-		</div>
+        while ($row = mysqli_fetch_assoc($result)) {
+            $image_url = $row['image_url'];
+            echo '<div class="slide"><img src="uploads/'.$image_url.'" alt="Slide"></div>';
+        }
 
+        mysqli_close($conn);
+        ?>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
     
-		<!-- <div class="image fade">
-			<img src="Components/Images/004.png" alt="Palm Trees">
-			<div class="text">भारत जोडो यात्रा</div>
-		</div>
-
-    
-		<div class="image fade">
-			<img src="Components/Images/005.png" alt="Palm Trees">
-			<div class="text">भारत जोडो यात्रा</div>
-		</div>
-
-
-    
-		<div class="image fade">
-			<img src="Components/Images/006.png" alt="Palm Trees">
-			<div class="text">भारत जोडो यात्रा</div>
-		</div>
-	</div> -->
-	
 	<!-------------------------Image-slide End-------------------------->
 
       <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
