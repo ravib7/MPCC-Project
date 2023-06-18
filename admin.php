@@ -21,6 +21,12 @@
    <div class="container">
 <!----------First-Option-Start--------->
     <section id="first">
+
+    <p> max-width: 100%;<br>
+        max-height: 450px;</p>
+    <h1 style="color:#000; font-size: 30px; text-align:center; margin-top: -300px; margin-left: 200px;">
+    Top Image Upload</h1>
+
     <?php if (isset($_GET['error'])): ?> 
      <p><?php echo $_GET['error']; ?></p>   
     <?php endif ?>
@@ -37,11 +43,19 @@
 <!----------Second-Option-Start--------->
 
     <section id="second">
+
+         <p>max-width: 97%;<br>
+            width: 100%;<br>
+            height: 500px;</p>
+    <h1 style="color:#000; font-size: 30px; text-align:center; margin-top: -300px; margin-left: 175px;">
+     Image Slide Upload</h1>
+
+
     <?php if (isset($_GET['error'])): ?> 
     <p><?php echo $_GET['error']; ?></p>   
     <?php endif ?>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="upload-image_slide.php" method="post" enctype="multipart/form-data">
 
     <input type="file" name="image">
 
