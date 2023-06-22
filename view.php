@@ -10,8 +10,8 @@
 	  <link rel="stylesheet" href="Components/CSS/navbar.css"> 
 	  <link rel="stylesheet" href="Components/CSS/style.css">
 	  <link rel="stylesheet" href="Components/CSS/about-us.css">
-    <link rel="stylesheet" href="Components/CSS/events-&-news.css">
-    <link rel="stylesheet" href="Components/CSS/sing in& signup.css">
+    <link rel="stylesheet" href="Components/CSS/EventsNews.css">
+    <link rel="stylesheet" href="Components/CSS/SingInSignup.css">
 
     <style>
    .slide-container {
@@ -105,8 +105,8 @@ img {
         </li>
         <li>
 
-          <li><a href="events-&-news.html">Events&News</a></li>
-          <li><a href="#">GR</a></li>
+          <li><a href="events-news.html">Events&News</a></li>
+          <li><a href="GR-page.php">GR</a></li>
         <li>
 
           <label for="btn-2" class="show">Login +</label>
@@ -199,10 +199,6 @@ img {
 
       <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-     	<script src="Components/JS/app.js"></script>
 
-
-
-  
 </body>
 </html>

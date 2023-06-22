@@ -13,10 +13,10 @@
   transform: scale(1.05);
 }
 
-.card-img-top {
+/* .card-img-top {
   border-radius: 50%;
   object-fit: cover;
-}
+} */
 
 /* Media Queries for Card-1 */
 @media (max-width: 576px) {
@@ -41,10 +41,9 @@
     margin: 30px auto;
   }
 }
-
 @media (min-width: 1025px) and (max-width: 1400px) {
   .card {
-    width: 25%;
+    width: 70%;
     margin: 30px auto;
     margin-right: 55%;
   }
@@ -102,7 +101,7 @@
 
 @media (min-width: 1025px) and (max-width: 1400px) {
   .card2 {
-    width: 25%;
+    width: 75%;
     margin: 30px auto;
     margin-left: 55%;
     margin-top: -40%;

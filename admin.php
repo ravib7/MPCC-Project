@@ -1,88 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Components/CSS/admin_page.css">
+  <link rel="stylesheet" type="text/css" href="Components\CSS\admin_page.css">
 </head>
-
 <body>
+
+<nav class="navbar">
+    <ul>
+      <li><a href="view.php">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Uploads</a>
+        <div class="dropdown-content">
+          <a href="#" data-target="option1">Top-Image Upload</a>
+          <a href="#" data-target="option2">Image-Slide Upload</a>
+          <a href="#" data-target="option3">GR Upload</a>
+        </div>
+      </li>
+      <li><a href="#" id="downloadLink">Data Download</a></li>
+      <li><a href="view.php" target="_blank">Logout</a></li>
+    </ul>
+  </nav>
+
+<div id="content">
+  
+  <div id="option1" class="page" style="margin-left:40%;">
+
+  <h1>Top Image Upload</h1>
+
+  <p>max-width: 100%;<br>
+     width: 100%;<br>
+     max-height: 362px; </P>
+
+  <?php if (isset($_GET['error'])): ?> 
+      <p><?php echo $_GET['error']; ?></p>   
+  <?php endif ?>
+
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+
+  <input type="file" name="image">
+
+  <input type="submit" name="submit" value="Upload">
+
+  </form>
+
+  </div>
+
+<!---------------------Option-2--------------------->
+
+  <div id="option2" class="page" style="margin-left:40%;">
+
+  <h1>Image Slide Upload</h1>
+
+  <p>max-width: 97%;<br>
+     width: 100%;<br>
+     height: 500px;
+  </P>
+  
+  <?php if (isset($_GET['error'])): ?> 
+      <p><?php echo $_GET['error']; ?></p>   
+  <?php endif ?>
+
+  <form action="upload-image_slide.php" method="post" enctype="multipart/form-data">
+
+  <input type="file" name="image">
+
+  <input type="submit" name="submit" value="Upload">
+
+  </form>
+  </div>
+
+ <!---------------------Option-3--------------------->
+
+  <div id="option3" class="page"  style="margin-left:35%;">
     
-<nav>
-    <a href="#first"><i class="#"></i>Top-Image</a>
-    <a href="#second"><i class="#"></i>Image-Side</a>
-    <a href="#third"><i class="#"></i>GR</a>
-    <a href="#four"><i class="#"></i>Data Download</a>
-</nav>
+  <form action="pdf-upload.php" method="POST" enctype="multipart/form-data">
+  <input type="file" name="pdfFile" accept=".pdf">
+  <input type="submit" value="Upload PDF">
+</form>
 
-   <div class="container">
-<!----------First-Option-Start--------->
-    <section id="first">
+  </div>
 
-    <p> max-width: 100%;<br>
-        max-height: 450px;</p>
-    <h1 style="color:#000; font-size: 30px; text-align:center; margin-top: -300px; margin-left: 200px;">
-    Top Image Upload</h1>
+  
 
-    <?php if (isset($_GET['error'])): ?> 
-     <p><?php echo $_GET['error']; ?></p>   
-    <?php endif ?>
+   <div id="Logout" class="page">
+    <!-- Contact content here -->
+  </div>
+</div>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-
-    <input type="file" name="image">
-
-    <input type="submit" name="submit" value="Upload">
-    </form>
-    </section>
-<!----------First-Option-End--------->
-
-<!----------Second-Option-Start--------->
-
-    <section id="second">
-
-         <p>max-width: 97%;<br>
-            width: 100%;<br>
-            height: 500px;</p>
-    <h1 style="color:#000; font-size: 30px; text-align:center; margin-top: -300px; margin-left: 175px;">
-     Image Slide Upload</h1>
-
-
-    <?php if (isset($_GET['error'])): ?> 
-    <p><?php echo $_GET['error']; ?></p>   
-    <?php endif ?>
-
-    <form action="upload-image_slide.php" method="post" enctype="multipart/form-data">
-
-    <input type="file" name="image">
-
-    <input type="submit" name="submit" value="Upload">
-    </form>
-    </section>
-
-<!----------Second-Option-Start--------->
-
-<!----------Third-Option-Start--------->
-
-    <section id="third">
-        <h1>Third</h1>
-    </section>
-
-<!----------Third-Option-Start--------->
-
-<!----------Four-Option-Start--------->
-
-    <section id="four">
-        <h1>Four</h1>
-    </section>
-
-<!----------Four-Option-Start--------->
-
-
-   </div>
-
+  
+  <!-- Your page content goes here -->
+  
+  <script src="Components\JS\script.js"></script>
 </body>
 </html>
